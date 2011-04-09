@@ -4,7 +4,7 @@
 
 alias ls='ls -lh --color=auto --group-directories-first'
 alias hi='highlight -O xterm256'
-alias conf='GIT_DIR=~/.configs.git git'
+alias conf='GIT_DIR=~/.configs.git GIT_CONFIG=~/.config/gitconfig.configs git'
 
 PS1='[\A][\u: \W]\$ '
 

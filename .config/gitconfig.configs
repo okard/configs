@@ -1,0 +1,14 @@
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+    
+[core]
+    excludesfile = ~/.config/.gitignore.configs
+
+[status]
+	showUntrackedFiles = no
+    
+[alias]
+	st = status -s
