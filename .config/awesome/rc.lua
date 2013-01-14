@@ -38,7 +38,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+--beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "sakura"
@@ -253,7 +254,8 @@ globalkeys = awful.util.table.join(
 
 -- Client onTop, Sticky and Floating
 function topstickfloat(c)
-    awful.client.floating.toggle(c)
+    --awful.client.floating.toggle(c)
+    awful.client.floating.set (c, true)
     c.ontop = true
     c.sticky = true
 end
