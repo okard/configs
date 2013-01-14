@@ -1,13 +1,20 @@
+#
+# ~/.bashrc
+#
 
-# Check for an interactive session
-[ -z "$PS1" ] && return
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-alias ls='ls -lh --color=auto --group-directories-first'
-alias hi='highlight -O xterm256'
-alias conf='GIT_DIR=~/.configs.git GIT_CONFIG=~/.config/gitconfig.configs git'
-
+#bash prompts
 PS1='[\A][\u: \W]\$ '
 
+#aliases
+alias ls='LC_COLLATE=C ls -lh --color=auto --group-directories-first'
+alias hi='highlight -O xterm256'
+
+# set editor
 export EDITOR="/usr/bin/vim" 
+
+# local scripts
 export PATH=~/.local/bin:$PATH
 
